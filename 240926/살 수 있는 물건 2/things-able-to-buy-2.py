@@ -5,7 +5,7 @@ subjects = [{"name": "book", "price": 3000},
 money = int(input())
 check = True
 for subject in subjects:
-    if subject["price"] >= money:
+    if subject["price"] <= money:
         print(subject["name"])
         check = False
         break
