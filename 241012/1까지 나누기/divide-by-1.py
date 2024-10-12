@@ -6,6 +6,5 @@ while n != 0:
     n //= i
     i += 1
     cnt += 1
-    print(n)
 
 print(cnt)
