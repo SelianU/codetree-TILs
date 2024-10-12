@@ -1,6 +1,6 @@
 n = int(input())
 
-i, cnt = 2, -1
+i, cnt = 2, 0
 
 while n != 0:
     n //= i
