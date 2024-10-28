@@ -1,0 +1,5 @@
+n = input()
+li = list(map(int, input().split()))
+li.pop(li.index(2))
+li.pop(li.index(2))
+print(li.index(2) + 3)
