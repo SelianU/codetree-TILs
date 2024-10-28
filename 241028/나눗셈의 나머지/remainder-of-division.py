@@ -9,6 +9,6 @@ while a != 0:
 answer = 0
 
 for i in m:
-    answer += i ^ 2
+    answer += i * i
 
 print(answer)
