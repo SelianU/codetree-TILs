@@ -8,7 +8,7 @@ count = 0
 gkq = 0
 
 for k in li:
-    if c in k:
+    if c == k[0]:
         count += 1
         gkq += len(k)
 
