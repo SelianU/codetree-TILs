@@ -11,4 +11,4 @@ for i in range(len(n) + 1):
     if i == len(n):
         count = -1
 
-print(count)
+print(len(n) if count == 0 else count)
