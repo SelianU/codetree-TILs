@@ -9,7 +9,10 @@ def continuous_partial_sequence(parent_li, child_li, parent_size, child_size):
                 continue
         if k != 0:
             return False
-    return True
+    if k > 0:
+        return True
+    else:
+        return False
         
 
 li_a_size, li_b_size = map(int, input().split())
