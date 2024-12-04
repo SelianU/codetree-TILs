@@ -9,7 +9,7 @@ def continuous_partial_sequence(parent_li, child_li, parent_size, child_size):
                 continue
         if k != 0:
             return False
-    if k > 0:
+    if k == child_size:
         return True
     else:
         return False
