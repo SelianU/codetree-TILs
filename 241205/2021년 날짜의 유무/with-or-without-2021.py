@@ -1,6 +1,9 @@
 def exist(month, day):
-    if month == 2 and day < 29:
+    if month == 2:
+        if day < 29:
             return True
+        else:
+            return False
     if month < 8:
         if month % 2 == 0 and day < 31:
             return True
