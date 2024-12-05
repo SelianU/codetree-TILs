@@ -9,7 +9,7 @@ def exist(month, day):
             return True
         elif month % 2 == 1 and day < 32:
             return True
-    if month < 13:
+    elif month < 13:
         if month % 2 == 0 and day < 32:
             return True
         elif month % 2 == 1 and day < 31:
