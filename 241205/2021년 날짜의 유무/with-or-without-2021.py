@@ -7,10 +7,10 @@ def exist(month, day):
     if month < 8:
         if month % 2 == 0 and day < 31:
             return True
-        elif month % 2 == 1 and day < 30:
+        elif month % 2 == 1 and day < 32:
             return True
     if month < 13:
-        if month % 2 == 0 and day < 30:
+        if month % 2 == 0 and day < 32:
             return True
         elif month % 2 == 1 and day < 31:
             return True
