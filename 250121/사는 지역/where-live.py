@@ -28,7 +28,7 @@ for i in range(n):
 slow_name = 0
 
 for i in range(1, n):
-    if streets[i - 1].name < streets[i].name:
+    if streets[slow_name].name < streets[i].name:
         slow_name = i
 
 streets[slow_name].print()
