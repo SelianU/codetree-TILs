@@ -6,6 +6,6 @@ time1 = 11 * 24 * 60 + 11 * 60 + 11
 
 time2 = a * 24 * 60 + b * 60 + c
 
-answer = time2 - time1 if time2 - time1 > 0 else -1
+answer = time2 - time1 if time2 - time1 > -1 else -1
 
 print(answer)
