@@ -13,4 +13,4 @@ for i in  range(m2 + 1):
     second += months[i]
 second += d2
 
-print(second - first)
+print(second - first if second - first else 1)
