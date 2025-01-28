@@ -3,14 +3,15 @@ m1, d1, m2, d2 = map(int, input().split())
 # Write your code here!
 months = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-first, second = 0, 0
+first, second = d1, d2
 
 for i in range(m1 + 1):
     first += months[i]
-first += d1
 
 for i in  range(m2 + 1):
     second += months[i]
-second += d2
 
-print(second - first if second - first else 1)
+answer = second - first
+answer = 1 if answer == 0 else answer
+
+print(answer)
