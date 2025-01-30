@@ -3,6 +3,9 @@ n = int(input())
 # Write your code here!
 digits = []
 
+if n == 0:
+    digits.append(0)
+
 while n > 0:
     digits.append(n % 2)
     n //= 2
