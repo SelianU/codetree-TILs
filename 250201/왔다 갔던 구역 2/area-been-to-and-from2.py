@@ -13,10 +13,11 @@ k = 101
 
 for i in range(n):
     for j in range(x[i]):
-        dots[k] += 1
         if dir[i] == 'L':
             k -= 1
+            dots[k] += 1
         if dir[i] == 'R':
+            dots[k] += 1
             k += 1
 
 answer = 0
