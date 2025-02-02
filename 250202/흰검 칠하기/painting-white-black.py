@@ -7,9 +7,9 @@ for num, direction in commands:
     dir.append(direction)
 
 # Write your code here!
-dots = [[0, 'N'] for _ in range(201)]
+dots = [[0, 'N'] for _ in range(100001)]
 
-k = 101
+k = 50001
 
 for i in range(n):
     if dir[i] == 'L':
