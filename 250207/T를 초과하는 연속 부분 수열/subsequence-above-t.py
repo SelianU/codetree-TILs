@@ -12,7 +12,7 @@ for i in range(len(arr)):
         else:
             count += 1
     elif count > 0:
-        count = 1
+        count = 0
     answer = max(answer, count)
 
 print(answer)
