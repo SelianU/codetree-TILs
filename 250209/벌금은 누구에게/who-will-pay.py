@@ -3,6 +3,7 @@ student = [int(input()) for _ in range(M)]
 
 # Write your code here!
 students = {}
+answer = -1
 
 for i in range(M):
     if student[i] not in students.keys():
@@ -10,11 +11,9 @@ for i in range(M):
     else:
         students[student[i]] += 1
 
-answer = -1
-
-for i in range(1, N):
-    if i in students.keys() and students[i] >= K:
-        answer = i
-        break
+    for i in range(1, N):
+        if i in students.keys() and students[i] >= K:
+            answer = i
+            break
 
 print(answer)
