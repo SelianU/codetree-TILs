@@ -12,7 +12,9 @@ for i in range(M):
         students[student[i]] += 1
 
     for key, value in students.items():
-        if value >= K:
+        if answer != -1:
+            break
+        if value == K:
             answer = key
             break
 
