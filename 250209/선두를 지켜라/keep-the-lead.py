@@ -30,10 +30,14 @@ for i in range(m):
 
 change = 0
 
-if a[1] > b[1]:
-    first, second = a, b
-else:
-    first, second = b, a
+for i in range(len(a)):
+    if a[i] == b[i]:
+        continue
+    elif a[i] > b[i]:
+        first, second = a, b
+    else:
+        first, second = b, a
+    break
 
 for idx in range(2, len(a)):
     if first[idx] < second[idx]:
