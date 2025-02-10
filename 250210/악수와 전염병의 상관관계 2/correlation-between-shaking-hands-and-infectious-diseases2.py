@@ -26,7 +26,7 @@ for handshake in handshakes:
     elif people[first][1] < K and people[second] == [1, K]:
         people[first][1] += 1
         
-    else:
+    else people[first][1] < K and people[second][1] < K and people[second][0] == 1:
         people[first][1] += 1
         people[second][1] += 1
     
