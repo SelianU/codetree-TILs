@@ -10,25 +10,21 @@ handshakes.sort(key=lambda x:x[0])
 for handshake in handshakes:
     first, second = handshake[1], handshake[2]
 
-    if people[first] == [0, 0] and people[second] == [0, 0]:
-        continue
-    elif people[first] == [0, 0] and people[second] == [1, K]:
-        continue
-    elif people[first] == [0, 0] and people[second][1] < K:
+    if people[first] == [0, 0] and people[second][1] < K and people[second][0] == 1:
         people[first] = [1, 0]
         people[second][1] += 1
-    elif people[first] == [1, K] and people[second] == [0, 0]:
-        continue
-    elif people[first] == [1, K] and people[second] == [1, K]:
-        continue
-    elif people[first] == [1, K] and people[second][1] < K:
+
+    elif people[first] == [1, K] and people[second][1] < K and people[second][0] == 1:
         people[second][1] += 1
+
     elif people[first][1] < K and people[second] == [0, 0]:
         people[first][1] += 1
         people[second] = [1, 0]
+
     elif people[first][1] < K and people[second] == [1, K]:
         people[first][1] += 1
-    else:
+
+    elif people[first][1] < K and people[second][1] < K and people[second][0] == 1:
         people[first][1] += 1
         people[second][1] += 1
     
