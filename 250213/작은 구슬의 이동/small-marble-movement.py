@@ -5,7 +5,7 @@ r, c = int(r), int(c)
 # Write your code here!
 matrix = [[0 for _ in range(n)] for _ in range(n)]
 
-direction = {'U': 0, 'R': 1, 'D': 2, 'L': 3}
+direction = {'R': 0, 'D': 1, 'U': 2, 'L': 3}
 
 dx, dy = [0, 1, -1, 0], [1, 0, 0, -1]
 
@@ -23,6 +23,6 @@ for i in range(t):
         continue
     
     position = [position[0] + dx[dir_num], position[1] + dy[dir_num]]
-
+    
 for pos in position:
     print(pos + 1, end=' ')
