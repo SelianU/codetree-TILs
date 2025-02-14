@@ -17,10 +17,9 @@ for command in commands:
     else:
         dir = (dir - 1) % 4
     count += 1
-
     if x == 0 and y == 0:
         break
     
-if count == len(commands):count = -1
+if count == len(commands) and (x != 0 or y != 0):count = -1
 
 print(count)
