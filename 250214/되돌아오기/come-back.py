@@ -14,10 +14,13 @@ count = 0
 for i in range(N):
     for j in range(dist[i]):
         x, y = x + dx[direction[dir[i]]], y + dy[direction[dir[i]]]
+        # print(f"dist[i]: {dist[i]}, x: {x}, y: {y}, count: {count}")
         count += 1
         if x == 0 and y == 0:
             break
     if x == 0 and y == 0:
         break
+    if i == N - 1:
+        count = -1
 
 print(count)
