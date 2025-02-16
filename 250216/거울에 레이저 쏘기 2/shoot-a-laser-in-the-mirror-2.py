@@ -21,7 +21,7 @@ def in_range(x, y):
 x, y = 0, 0
 dx, dy = [0, 1, 0, -1], [-1, 0, 1, 0]
 
-direction = k // n
+direction = (k - 1) // n
 
 # 초기 위치 설정
 if direction == 0:
