@@ -31,11 +31,11 @@ elif direction == 1:
     x = n - 1
     y = k - n - 1
 elif direction == 2:
-    x = 0 if k % n == 0 else n - k % 3 - 1
+    x = 0 if k % n == 0 else n - k % n
     y = n - 1
 else:
     x = 0
-    y = 0 if k % n == 0 else n - k  % 3
+    y = 0 if k % n == 0 else n - k % n
 
 count = 0
 
