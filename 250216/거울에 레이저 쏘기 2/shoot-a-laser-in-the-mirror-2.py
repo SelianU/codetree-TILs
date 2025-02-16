@@ -45,7 +45,7 @@ while True:
     nx, ny = x + dx[direction], y + dy[direction]
     if in_range(nx, ny):
         x, y = x + dx[direction], y + dy[direction]
-        if direction % 2:
+        if direction % 2 == 0:
             direction = 2 - direction
         else:
             direction = 4 - direction
