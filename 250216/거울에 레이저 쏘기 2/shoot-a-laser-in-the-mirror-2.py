@@ -19,7 +19,7 @@ def in_range(x, y):
     return 0 <= x and x < n and 0 <= y and y < n
 
 x, y = 0, 0
-dx, dy = [0, 1, 0, -1], [1, 0, -1, 0]
+dx, dy = [0, 1, 0, -1], [-1, 0, 1, 0]
 
 direction = k // n
 
