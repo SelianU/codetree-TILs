@@ -13,7 +13,7 @@ direction = 2
 
 number = 1
 
-while number <= N * M:
+while number < N * M:
     grid[y][x] = number
     nx, ny = x + dx[direction], y + dy[direction]
     if in_range(nx, ny) and grid[ny][nx] == 0:
@@ -21,7 +21,9 @@ while number <= N * M:
         number += 1
     else:
         direction = (direction - 1) % 4
-    
+
+grid[y][x] = number
+
 for g in grid:
     for i in g:
         print(i, end=' ')
