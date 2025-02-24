@@ -18,9 +18,10 @@ for i in range(len(b)):
         bi += 10 ** (len(b) - i - 1)
         binarys.append(bi)
         bi -= 10 ** (len(b) - i - 1)
-
-if not binarys:
-    binarys.append(bi)
+    else:
+        bi -= 10 ** (len(b) - i - 1)
+        binarys.append(bi)
+        bi += 10 ** (len(b) - i - 1)
 
 max_num = 0
 
