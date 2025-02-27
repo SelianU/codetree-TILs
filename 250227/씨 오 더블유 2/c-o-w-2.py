@@ -1,18 +1,13 @@
 N = int(input())
-cow = input()
+cows = input()
+answer = 0
 
-c = o = answer = 0
-
-idx = cow.index('C')
-
-cow = cow[idx:]
-
-for s in cow:
-    if s == 'C':
-        c += 1
-    elif s == 'O':
-        o += 1
-    else:
-        answer += c * o
+for idx, c in enumerate(cows):
+    if c == 'C':
+        for id in range(idx, len(cows)):
+            if cows[id] == 'O':
+                for i in range(id, len(cows)):
+                    if cows[i] == 'W':
+                        answer += 1
 
 print(answer)
