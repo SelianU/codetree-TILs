@@ -2,7 +2,7 @@ N = int(input())
 numbers = [input() for _ in range(N)]
 
 non_carry_numbers = 0
-count = 0
+count = False
 
 def maxlen(num1, num2, num3):
     return max(len(num1), len(num2), len(num3))
@@ -19,9 +19,9 @@ for i in range(N):
                 p += 1
             if p == m:
                 non_carry_numbers = max(non_carry_numbers, num1 + num2 + num3)
-                count += 1
+                count = True
 
-if count == N * (N - 1) * (N - 2):
+if not count:
     print(-1)
 else:
     print(non_carry_numbers)
