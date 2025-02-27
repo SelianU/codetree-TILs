@@ -14,9 +14,9 @@ for i in range(N):
             num1, num2, num3 = map(int, (numbers[i], numbers[j], numbers[k]))
             p = 0
             for power in range(m):
-                p += 1
                 if (num1 // (10 ** power)) % 10 + (num2 // (10 ** power)) % 10 + (num3 // (10 ** power)) % 10 > 9:
                     break
+                p += 1
             if p == m:
                 non_carry_numbers = max(non_carry_numbers, num1 + num2 + num3)
                 count += 1
