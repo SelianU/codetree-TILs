@@ -7,7 +7,7 @@ arr = list(map(int, input().split()))
 for i in range(N):
     for j in range(i + 1, N):
         array = arr[:i] + arr[i + 1:j] + arr[j + 1:]
-        if sum(array) - S < 차이:
-            차이 = sum(array) - S
+        if abs(sum(array) - S) < 차이:
+            차이 = abs(sum(array) - S)
 
 print(차이)
