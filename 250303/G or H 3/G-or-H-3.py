@@ -7,7 +7,7 @@ for _ in range(n):
     c.append(char)
 
 # Please write your code here.
-length = max(x) + 1
+length = 10000 # max(x) + 1
 stamp = [0] * length
 for idx, i in enumerate(x):
     stamp[i] = 1 if c[idx] == 'G' else 2
