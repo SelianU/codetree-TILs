@@ -11,7 +11,7 @@ for _ in range(N):
 line = [0] * max(pos)
 
 for idx, p in enumerate(pos):
-    line[p - 1] = candy[idx]
+    line[p - 1] += candy[idx]
 
 l = len(line)
 answer = 0
