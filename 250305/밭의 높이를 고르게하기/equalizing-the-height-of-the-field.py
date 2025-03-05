@@ -2,7 +2,6 @@ N, H, T = map(int, input().split())
 arr = list(map(int, input().split()))
 
 # Please write your code here.
-arr.sort()
 t = []
 for a in arr:
     t.append(abs(a - H))
