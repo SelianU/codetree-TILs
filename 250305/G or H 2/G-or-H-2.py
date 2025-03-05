@@ -14,7 +14,7 @@ for idx, p in enumerate(pos):
         line[p] = 2
 
 def count_single(line):
-    count = 0
+    count = 1
     t = line[0]
     answer = 0
     for idx, dot in enumerate(line):
