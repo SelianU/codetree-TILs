@@ -7,23 +7,28 @@ for _ in range(n):
     c.append(cnt2)
 
 # Please write your code here.
-numbers = [str(i) for i in range(111, 1000) if '0' not in str(i)]
+numbers = [str(i) for i in range(111, 1000) if '0' not in str(i) and str(i)[0] != str(i)[1] and str(i)[1] != str(i)[2] and str(i)[0] != str(i)[2]]
 a = [str(i) for i in a]
 
 count = 0
 answer = 0
 
+def countStrike(numb, comp):
+    k = 0
+    for l in range(3):
+        if numb[l] == comp[l]:
+            k += 1
+    return k
+
+def countBall(numb, comp):
+    k = 0
+    for l in range(3):
+        if numb[l] != comp[l] and numb[l] in comp:
+            k += 1
+    return k
+
 def compare(numb, comp):
-    st = ba = 0
-    pos = []
-    for digit in range(3):
-        if numb[digit] == comp[digit]:
-            st += 1
-            pos.append(digit)
-    for digit in range(3):
-        if digit not in pos and comp[digit] in numb:
-            ba += 1
-    return st, ba
+    return countStrike(numb, comp), countBall(numb, comp)
 
 for number in numbers:
     count = 0
