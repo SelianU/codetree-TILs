@@ -14,4 +14,7 @@ for i in range(5):
                     if team1 != team2 and team2 != team3 and team3 != team1:
                         min_difference = min(min_difference, max(team1, team2, team3) - min(team1, team2, team3))
 
+if min_difference == float('inf')
+    min_difference = -1
+
 print(min_difference)
