@@ -20,9 +20,9 @@ else:
     for i in range(len(possible_sick_cheese)):
         # 1번은 같은데 0번이 다른게 s개 있으면 가능성 있음
         for j in range(i, len(possible_sick_cheese)):
-            if possible_sick_cheese[i][1] == possible_sick_cheese[j][1] and possible_sick_cheese[i][0] != possible_sick_cheese[j][0]:
+            if possible_sick_cheese[i][1] == possible_sick_cheese[j][1]:
                 count += 1
-        if count == S:
+        if count >= S:
             sick_cheese.append(possible_sick_cheese[i][1])
 
 sick_cheese = set(sick_cheese)
