@@ -18,19 +18,24 @@ if len(possible_sick_cheese) == 1:
     sick_cheese = [possible_sick_cheese[0][1]]
 else:
     for i in range(len(possible_sick_cheese)):
-        # 1번은 같은데 0번이 다른게 s개 있으면 가능성 있음
+        # 1번은 같은게 s개 있으면 가능성 있음
         for j in range(i, len(possible_sick_cheese)):
             if possible_sick_cheese[i][1] == possible_sick_cheese[j][1]:
                 count += 1
-        if count >= S:
+        if count > S:
             sick_cheese.append(possible_sick_cheese[i][1])
 
 sick_cheese = set(sick_cheese)
 
-sick_person = []
-answer = 0
-for cheese_person in eat_cheese:
-    if cheese_person[1] in sick_cheese:
-        sick_person.append(cheese_person[0])
+# print(possible_sick_cheese)
+# print(sick_cheese)
 
-print(len(set(sick_person)))
+answer = 0
+for cheese in sick_cheese:
+    sick_person = []
+    for cheese_person in eat_cheese:
+        if cheese_person[1] == cheese:
+            sick_person.append(cheese_person[0])
+    answer = max(answer, len(set(sick_person)))
+
+print(answer)
