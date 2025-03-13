@@ -4,15 +4,13 @@ num = [int(input()) for _ in range(N)]
 # Please write your code here.
 answer = []
 
-for i in range(N - K):
-    for j in range(i + 1, i + K + 1):
+for i in range(N):
+    for j in range(i + 1, N):
+        if i + K < j:
+            break
         if num[i] == num[j]:
             answer.append(num[i])
-# for i in range(N - 1, K - 2, -1):
-#     for j in range(i - 1, i - K - 2, -1):
-#         if num[j] == num[i]:
-#             answer.append(num[i])
-
+            
 if not answer:
     print(-1)
 else:
