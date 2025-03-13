@@ -2,15 +2,14 @@ N, K = map(int, input().split())
 num = [int(input()) for _ in range(N)]
 
 # Please write your code here.
-answer = -1
+answer = []
 
 for i in range(N - 1, K - 2, -1):
-    bomb = num[i]
     for j in range(i - 1, i - K - 2, -1):
-        if num[j] == bomb:
-            answer = bomb
-            break
-    if answer != -1:
-        break
+        if num[j] == num[i]:
+            answer.append(num[i])
 
-print(answer)
+if not answer:
+    print(-1)
+else:
+    print(max(answer))
