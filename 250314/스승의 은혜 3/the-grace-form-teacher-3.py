@@ -12,5 +12,6 @@ for i in range(N):
         total += new_new_gifts[j]
         if total > B:
             answer.append(j)
+            break
 
 print(max(answer))
