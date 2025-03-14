@@ -14,4 +14,4 @@ for i in range(N):
             answer = j + 1
             break
 
-print(j)
+print(answer)
