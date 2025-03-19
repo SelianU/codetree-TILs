@@ -9,6 +9,11 @@ answer = 0
 for i in range(height):
     h = [ice - 1 if ice > 1 else 0 for ice in h]
     count = 0
+    for k in range(len(h)):
+        if 0 in h and h[0] == 0:
+            h.remove(0)
+        else:
+            break
     for idx in range(len(h) - 1):
         if h[idx] == 0 and h[idx + 1] != 0:
             count += 1
