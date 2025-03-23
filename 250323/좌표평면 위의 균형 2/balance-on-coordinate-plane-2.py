@@ -22,7 +22,7 @@ def divide_y(points):
     elif points[mid - 1][1] == points[mid][1] and points[mid][1] != points[mid + 1][1]:
         return points[mid][1] + 1
     else:
-        return points[mid][0] - 1
+        return points[mid][1] - 1
 
 def count_direction(x, y):
     count = [0, 0, 0, 0]
