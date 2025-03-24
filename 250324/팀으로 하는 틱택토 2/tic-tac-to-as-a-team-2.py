@@ -12,14 +12,24 @@ row_set = [set(r) for r in row]
 diagonal_set = [set(d) for d in diagonal]
 
 count = 0
+set_of_team = []
 for c in column_set:
     if len(c) == 2:
+        if c in set_of_team:
+            continue
+        set_of_team.append(c)
         count += 1
 for r in row_set:
     if len(r) == 2:
+        if r in set_of_team:
+            continue
+        set_of_team.append(r)
         count += 1
 for d in diagonal_set:
     if len(d) == 2:
+        if d in set_of_team:
+            continue
+        set_of_team.append(d)
         count += 1
 
 print(count)
