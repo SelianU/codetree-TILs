@@ -3,9 +3,12 @@ arr = [0] + list(map(int, input().split()))
 
 # Please write your code here.
 def sumof(arr, idx, m):
-    if m == 1:
-        return arr[idx]
-    return arr[idx] + sumof(arr, arr[idx], m - 1)
+    tot = 0
+    t = idx
+    for k in range(m):
+        t = arr[t]
+        tot += t
+    return tot
 
 answer = 0
 for i in range(1, len(arr)):
