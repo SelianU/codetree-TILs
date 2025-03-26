@@ -5,6 +5,7 @@ seat = input()
 max_blank = 0
 min_blank = float('inf')
 
+count = 0
 for s in range(len(seat)):
     if seat[s] == '0':
         count += 1
